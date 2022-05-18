@@ -1,19 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png"/>
-  <MyComponent />
+  <header>
+    ้<h1>ระบบจัดการข้อมูลพนักงาน</h1>    
+  </header>
+  <section class="employee-content">
+    <ListData />
+  </section>
   
 </template>
 
 <script>
-
-import MyComponent from "./components/MyComponent.vue";
+// import FormComponent from './components/FormComponent.vue';
+import ListData from './components/ListData.vue';
+// import MyComponent from "./components/MyComponent.vue";
 
 export default {
   name: "App",
   components: {
-
-    MyComponent
-  },
+    // MyComponent,
+    ListData,
+    // FormComponent,
+  }
 };
 </script>
 
@@ -25,5 +31,25 @@ export default {
   /* text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
+}
+
+*{
+  box-sizing: border-box;
+}
+header{
+  box-shadow: 0 2px 8px #2c3e50;
+  border-radius: 6px;
+  padding: 1rem;
+  background:purple;
+  color:white;
+  text-align: center;
+  margin: 3rem;
+}
+.employee-content{
+  box-shadow: 0 2px 8px #2c3e50;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  margin: 3rem;
 }
 </style>
