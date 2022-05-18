@@ -3,7 +3,7 @@
     <div>
         <div>
             <button @click="showDescription(id)">ดูรายละเอียด</button> &nbsp;
-            <button>ลบ</button>
+            <button @click="deleteEmployee(id)">ลบ</button>
         </div>
     </div>
     <h1>{{ name }} </h1>
@@ -41,6 +41,9 @@ export default {
   methods:{
       showDescription(id){
           this.$emit("show",id);
+      },
+      deleteEmployee(id){
+          this.$emit("delete",id);
       }
   }
 };
